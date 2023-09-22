@@ -37,34 +37,20 @@
                     }
                 
                 // guide
-                else if ($row['user_type'] == 3) {
-                    $sql = "select statusflag from guide_registration where email='$email'";
-                    $res = sel($sql);
-                    $row = mysqli_fetch_assoc($res);
-                    if ($row['statusflag'] == 0) {
-                    ?>
-                        <script>
-                            Swal.fire({
-                                icon: 'info',
-                                title: 'Account under verification!',
-                            }).then((result) => {
-                                window.location.replace('../../index.html');
-                            });
-                        </script>
-                    <?php
-                    } else {
+                if ($row['user_type'] == 2) {
+                    
+                    
                     ?>
                         <script>
                             Swal.fire({
                                 icon: 'success',
-                                title: 'Welcome Back Guide!',
+                                title: 'Welcome Back User!',
                             }).then((result) => {
-                                window.location.replace('../../guide/index.php');
+                                window.location.replace('../teacher/index.php');
                             });
                         </script>
                     <?php
                     }
-                }
                 // hotel
                 else if ($row['user_type'] == 4) {
                     $sql = "select statusflag from hotel_registration where email='$email'";
@@ -95,7 +81,7 @@
                     }
                 }
                 //admin
-                else if ($row['user_type'] == 1) {
+                else if ($row['user_type'] == 34) {
                     ?>
                     <script>
                         Swal.fire({

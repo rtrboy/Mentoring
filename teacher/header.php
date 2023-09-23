@@ -1,3 +1,8 @@
+<?php
+require("../php/connect.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -485,13 +490,13 @@
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Login</span>
         </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="../php/logout.php">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Log out</span>
-        </a>
-    </li><!-- End Login Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="../php/logout.php">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Log out</span>
+          </a>
+      </li><!-- End Login Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-error-404.html">
